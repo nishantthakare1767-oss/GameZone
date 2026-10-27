@@ -1,0 +1,18 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "Agent": {
+    "ServerUrl": "http://192.168.1.10:4000",
+    "DeviceId": "00000000-0000-0000-0000-000000000000",
+    "EnrollmentCode": "",
+    "HeartbeatSeconds": 15,
+    "OfflineRetrySeconds": 5,
+    "GraceSeconds": 900,
+    "PipeName": "gamehub-agent",
+    "DataDirectory": "C:\\ProgramData\\GameHub"
+  }
+}

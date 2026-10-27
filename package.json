@@ -1,0 +1,29 @@
+{
+  "name": "gamehub-control-center",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Gaming cafe device, session and access-control management system",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:web": "npm --workspace web run dev",
+    "build": "npm --workspace server run build && npm --workspace web run build",
+    "typecheck": "npm --workspace server run typecheck && npm --workspace web run typecheck",
+    "test": "npm --workspace server run test",
+    "db:generate": "npm --workspace server run db:generate",
+    "db:migrate": "npm --workspace server run db:migrate",
+    "db:seed": "npm --workspace server run db:seed",
+    "backup": "npm --workspace server run backup",
+    "restore": "npm --workspace server run restore"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
